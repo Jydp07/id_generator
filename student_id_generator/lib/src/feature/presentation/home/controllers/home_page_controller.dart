@@ -10,6 +10,7 @@ import 'package:student_id_generator/src/core/utils/image_generation_utility.dar
 import 'package:student_id_generator/src/core/utils/snackbar_utility.dart';
 import 'package:student_id_generator/src/core/constants/app_strings.dart';
 import 'package:student_id_generator/src/feature/data/models/id_card_fields.dart';
+import 'package:student_id_generator/src/feature/presentation/home/widgets/id_card_widget.dart';
 import 'package:student_id_generator/src/shared/data/enums/enums.dart';
 import 'package:student_id_generator/src/shared/data/models/picked_local_file.dart';
 
@@ -276,6 +277,14 @@ class HomePageController extends GetxController {
     await ExportUtility.exportImagesAsPdf(
       images: images,
       fileName: fileName,
+    );
+  }
+
+  void openPreview() {
+    Get.dialog(
+      Material(
+        child: FittedBox(child: IdCardWidget(type: IdCardType.preview)),
+      ),
     );
   }
 }

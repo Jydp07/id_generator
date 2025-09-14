@@ -53,8 +53,11 @@ class PreviewPanel extends StatelessWidget {
                       else
                         Center(
                           child: FittedBox(
-                              child: IdCardWidget(
-                            type: IdCardType.preview,
+                              child: InkWell(
+                            onTap: () => controller.openPreview(),
+                            child: IdCardWidget(
+                              type: IdCardType.preview,
+                            ),
                           )),
                         ),
                       16.verticalBox,
