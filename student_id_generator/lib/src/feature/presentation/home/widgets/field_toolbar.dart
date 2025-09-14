@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:student_id_generator/src/core/constants/app_strings.dart';
-import 'package:student_id_generator/src/core/extensions/url_extenstion.dart';
 
 import 'package:student_id_generator/src/core/theme/app_colors.dart';
 import 'package:student_id_generator/src/feature/data/models/id_card_fields.dart';
