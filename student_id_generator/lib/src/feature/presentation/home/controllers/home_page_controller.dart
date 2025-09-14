@@ -240,6 +240,10 @@ class HomePageController extends GetxController {
     isPreviewGenerated.value = false;
     previewData.value = null;
     currentPreviewIndex.value = 0;
+    for (var field in fields) {
+      field.value = null;
+    }
+    excelHeaders.clear();
 
     for (var field in fields) {
       field.value = null;
